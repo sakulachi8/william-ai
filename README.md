@@ -1,6 +1,7 @@
 # William AI — AI-Powered Knowledge Query & Data Management Platform
 
-![Kcube AI Logo](<img width="1536" height="1024" alt="Kcube_AI_William_Case_Study" src="https://github.com/user-attachments/assets/406554b2-9c2b-40ce-a4f3-80b38679eefd" />)
+<img width="1536" height="1024" alt="Kcube_AI_William_Case_Study" src="https://github.com/user-attachments/assets/d614e3b6-5b08-4258-9a3a-8b30be0b0c68" />
+
 
 ## Overview
 William AI is an advanced AI-first platform designed to help businesses query internal knowledge bases using natural language and manage client data through intuitive dashboards. It delivers powerful tools for both administrators and clients to interact with data in real time and make informed decisions.
@@ -45,7 +46,46 @@ Kcube AI developed **William AI** using a **hybrid AI search architecture** and 
 | **MCP Server**  | Modular communication layer |
 
 ---
+## MCP Architecture
 
+<img width="952" height="713" alt="image" src="https://github.com/user-attachments/assets/3ed6f7fb-0296-402c-a3ca-a5076d821965" />
+
+
+
+---
+
+## User Flow Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client as MS Teams/Web
+    participant Backend as FastAPI on Azure Web App
+    participant DB as PostgreSQL
+    participant LLM as GPT 4o
+    participant Embedding as OpenAI Embeddings API
+    participant WebSearch as Perplexity API
+    participant MCP as Azure DevOps MCP
+
+    Client->>Backend: Send question
+    Backend->>Embedding: Get embeddings for the question
+    Embedding-->>Backend: Return embeddings
+    Backend->>DB: Categorize question (if category is devops.mcp)
+    DB-->>Backend: Return category
+    Backend->>MCP: Process question using Azure DevOps MCP
+    MCP-->>Backend: Return response
+    Backend->>DB: Vector Search for Brief and solved tickets (if category is not devops.mcp)
+    DB-->>Backend: Return search results from Brief and solved tickets
+    Backend->>DB: Vector Search for documentation urls
+    DB-->>Backend: Return search results from documentation urls
+    Backend->>WebSearch: Search for query in Perplexity API based on documentation urls
+    WebSearch-->>Backend: Return search results from Perplexity API
+    Backend->>LLM: Format search results and send to LLM
+    LLM-->>Backend: Return formatted response
+    Backend->>Client: Send response to user
+```
+
+
+---
 ## Live Link
 [🌐 William AI Web App](https://william-ai-webapp-dev.azurewebsites.net/)
 
