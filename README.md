@@ -1,6 +1,6 @@
 # William AI — AI-Powered Knowledge Query & Data Management Platform
 
-<img width="1536" height="1024" alt="Kcube_AI_William_Case_Study" src="https://github.com/user-attachments/assets/d614e3b6-5b08-4258-9a3a-8b30be0b0c68" />
+<img width="500" height="500" alt="Kcube_AI_William_Case_Study" src="https://github.com/user-attachments/assets/d614e3b6-5b08-4258-9a3a-8b30be0b0c68" />
 
 
 ## Overview
@@ -48,7 +48,7 @@ Kcube AI developed **William AI** using a **hybrid AI search architecture** and 
 ---
 ## MCP Architecture
 
-<img width="952" height="713" alt="image" src="https://github.com/user-attachments/assets/3ed6f7fb-0296-402c-a3ca-a5076d821965" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/3ed6f7fb-0296-402c-a3ca-a5076d821965" />
 
 
 
