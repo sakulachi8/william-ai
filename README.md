@@ -20,9 +20,6 @@ The challenge was ensuring **scalability, security, and real-time responsiveness
 ## Solution
 Kcube AI developed **William AI** using a **hybrid AI search architecture** and enterprise-grade cloud deployment. The platform integrates **AI-powered querying** with **data visualization and management**, providing a seamless experience for both admin and client roles.
 
-**Phase One** (4 sprints) is almost complete:
-- **Sprint 4**: Fully delivered.
-- **Sprint 3**: One task remaining (3 days left).
 
 **Key Features:**
 - AI chatbot integrated with **Perplexity API** and **OpenAI** for hybrid knowledge retrieval.
